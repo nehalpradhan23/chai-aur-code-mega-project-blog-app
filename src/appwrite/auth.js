@@ -1,10 +1,12 @@
 import conf from "../conf/conf.js";
 import { Client, Account, ID } from "appwrite";
 
+// https://appwrite.io/docs/products/auth/quick-start
 export class AuthService {
-  client = new Client();
-  account;
+  client = new Client(); // create client object
+  account; // create account object only when new class object is created
 
+  // create account object constructor to create when object is created
   constructor() {
     this.client
       .setEndpoint(conf.appwriteUrl)
@@ -61,4 +63,4 @@ export class AuthService {
 
 const authService = new AuthService();
 
-export default authService;
+export default authService; // export object
