@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function Header() {
-  const authStatus = useSelector((state) => state.auth.status); // get status from auth slice
+  const authStatus = useSelector((state) => state?.auth?.status); // get status from auth slice
   const navigate = useNavigate();
 
   // nav menu items
